@@ -6,18 +6,49 @@
                 <input type="search" placeholder="Search" ng-click="gotoSearchPage()">
             </label>
         </div>
-        <!-- <ul class="bxslider">
-            <li ng-repeat="productImage in slideProducts">
-                <img ng-src="{{productImage.imgSrc}}"></img>
-            </li>
-        </ul>
-         -->
-        <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}">
-            <ks-swiper-slide class="swiper-slide" ng-repeat="productImage in slideProducts">
-                <img ng-src="{{productImage.imgSrc}}" width="100%">
-            </ks-swiper-slide>
-        </ks-swiper-container>
-        <!-- 
+
+
+
+
+<div class="item card animated  {{animateSwipeCard.class}}"   on-release="onRelease()"  on-drag-left="onSwipeLeft()"  >
+    <div class="item item-body">
+ <img class="full-image" src="{{animateSwipeCard.currentImg}}">
+
+</div>
+</div>
+
+      <!--   <div class="list card animated  {{animateSwipeCard.class}}"  on-swipe="onSwipe()" >
+            <div class="item item-divider">Health</div>
+            <div class="item item-body">
+                <div>
+                    You ate an apple today!
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="carousel-item demo-3" ng-click="vm.onSelect({item:vm.ngModel})">
+            <div class="img-wrapper">
+                <img ng-src="{{vm.ngModel.src}}" />
+            </div>
+        </div> 
+        <div id="carousel-1" class="carousel-wrapper">
+            <div class="info">Center on select, align left</div>
+            <div class="carousel-item demo-3" ng-click="vm.onSelect({item:vm.ngModel})" ng-repeat="productImage in slideProducts">
+                <div class="img-wrapper">
+                    <img ng-src="{{productImage.src}}" />
+                </div>
+            </div>
+        </div>
+
+
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true" style="width:100%;height:300px;margin:auto;display:block">
+            <ion-slide ng-repeat="productImage in slideProducts">
+                <div class="box blue">
+                    <h1>BLUE {{productImage.imgSrc}} </h1>
+                    <img ng-src="{{productImage.imgSrc}}"></img>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        
         <ion-slide-box on-slide-changed="slideHasChanged($index)"  auto-play="true" does-continue="true" style="width:100%;height:300px;margin:auto;display:block">
             <ion-slide ng-repeat="productImage in slideProducts">
                 <div class="box blue">

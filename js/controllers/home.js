@@ -7,13 +7,70 @@ angular.module('myApp.home', ['ngRoute'])
     });
 }])
 
-.controller('homeCtrl', ['$scope', '$state', '$location', '$ionicSlideBoxDelegate', 'networkHandlerService', '$ionicLoading', function($scope, $state, $location, $ionicSlideBoxDelegate, networkHandlerService, $ionicLoading) {
+.controller('homeCtrl', ['$scope', '$state', '$location', '$ionicSlideBoxDelegate', 'networkHandlerService', '$ionicLoading', '$timeout', function($scope, $state, $location, $ionicSlideBoxDelegate, networkHandlerService, $ionicLoading, $timeout) {
 
     $scope.slideProducts = [];
 
     $scope.categories = [];
 
     var count = 0;
+    var totalSlideProductsCount = 0;
+
+
+    $scope.animateSwipeCard = {};
+
+
+    $scope.onSwipeLeft = function() {
+        console.log(" $scope.onSwipeLeft = function(){");
+        // $scope.animateSwipeCard.class = bounceInRight;
+        $scope.animateSwipeCard.class = "bounceOutLeft";
+    }
+
+
+    $scope.onRelease = function() {
+
+        $timeout(function() {
+
+            $scope.animateSwipeCard.class = "bounceInRight";
+            $scope.animateSwipeCard.currentImg = $scope.slideProducts[count].imgSrc;
+
+            count = (count + 1) % totalSlideProductsCount;
+            console.log(" count " + count)
+
+        }, 400);
+
+
+    }
+
+    $scope.onSwipeRight = function() {
+
+        console.log(" $scope.onSwipeRight = function(){");
+        count--;
+
+
+
+        /*count = (count-1)%totalSlideProductsCount;*/
+
+
+
+        console.log(" count " + count)
+
+        console.log(" $scope.onSwipeRight = function(){");
+        // $scope.animateSwipeCard.class = bounceInRight;
+        $scope.animateSwipeCard.class = "bounceOutRight";
+
+        $timeout(function() {
+
+            $scope.animateSwipeCard.class = "bounceInLeft";
+            $scope.animateSwipeCard.currentImg = $scope.slideProducts[count].imgSrc;
+
+
+        }, 500);
+
+    }
+
+
+
 
 
 
@@ -26,6 +83,7 @@ angular.module('myApp.home', ['ngRoute'])
 
 
 
+                totalSlideProductsCount = response.data.productImageURLs.length;
 
                 response.data.productImageURLs.forEach(function(entry) {
                     console.log(" entry :" + entry);
@@ -36,10 +94,17 @@ angular.module('myApp.home', ['ngRoute'])
                     };
                     $scope.slideProducts.push(img);
 
+
+
                 });
 
 
                 console.log(" $scope.slideProducts " + JSON.stringify($scope.slideProducts));
+
+                $scope.animateSwipeCard.class = "bounceInRight";
+                $scope.animateSwipeCard.currentImg = $scope.slideProducts[count].imgSrc;
+
+
 
 
 
