@@ -10,6 +10,9 @@ angular.module('myApp.networkHandlerService', ['ngRoute'])
 		signature_method: 'HMAC-SHA1'
 	});
 
+
+
+
 	// For all Product details
 	// url: 'http://www.cheethakart.com/wc-api/v3/products',
 
