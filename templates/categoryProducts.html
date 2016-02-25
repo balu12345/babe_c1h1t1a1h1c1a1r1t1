@@ -1,25 +1,17 @@
 <ion-view view-title="{{categoryName}}" ng-controller="categoryProductsCtrl" ng-init="loadCategoryProducts()">
-
-  <ion-content>
-
-    <div class="card" ng-repeat="product in categoryProducts track by $index">
-      <div class="item item-text-wrap item-thumbnail-left" ng-click="gotoProductView(product)" style="float: left; text-align: left;">
-        <img ng-src="{{product.featured_src}}" ng-if="product.featured_src.startsWith('http')">
-        <h2>{{product.title}}</h2>
-        <p>
-          <div data-ng-bind-html="product.short_description"></div>
-          <br>
-          Cost: &nbsp;&nbsp;Rs.
-          {{product.price}}/-
-          <br>
-          Rating:
-          <rating ng-model="product.rating_count" max="5" readonly="true"></rating>
-        </p>
-      </div>
-    </div>
-
-    <ion-infinite-scroll on-infinite="loadMoreProducts()" distance="4%" ng-if="hasMoreProducts"></ion-infinite-scroll>
-
-  </ion-content>
-
+    <ion-content>
+        <div class="card" ng-repeat="product in categoryProducts track by $index">
+            <div class="item item-text-wrap item-thumbnail-left" ng-click="gotoProductView(product)" style="float: left; text-align: left;">
+                <img ng-src="{{product.featured_src}}">
+                <h2>{{product.title}}</h2>
+                <p>
+                    <div data-ng-bind-html="product.short_description"></div>
+                    <br> Cost: &nbsp;&nbsp;Rs. {{product.price}}/-
+                    <br> Rating:
+                    <rating ng-model="product.rating_count" max="5" readonly="true"></rating>
+                </p>
+            </div>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMoreProducts()" distance="4%" ng-if="hasMoreProducts"></ion-infinite-scroll>
+    </ion-content>
 </ion-view>

@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngRoute',
-    'ionic',
+    'ionic','ksSwiper',
 
     'myApp.controllers',
 
@@ -34,11 +34,11 @@ angular.module('myApp', ['ngRoute',
 
         if ($window.plugins && $window.plugins.googleplus) {
             $window.plugins.googleplus.isAvailable(
-                function (available) {
-                if (available) {
-                    console.log("available");
-                }
-            });
+                function(available) {
+                    if (available) {
+                        console.log("available");
+                    }
+                });
         }
 
         var deviceInformation = ionic.Platform.device();
@@ -54,6 +54,10 @@ angular.module('myApp', ['ngRoute',
 
         // console.log(deviceInformation + " " + isWebView + " " + isAndroid + " " + currentPlatform + " " + currentPlatformVersion);
 
+
+
+
+
     });
 })
 
@@ -61,122 +65,122 @@ angular.module('myApp', ['ngRoute',
 
     $stateProvider
 
-    .state('myApp', {
+        .state('myApp', {
         url: '/myApp',
         abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'appCtrl'
-      })
+    })
 
-      .state('myApp.home', {
+    .state('myApp.home', {
         url: '/home',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/home.html',
-            controller: 'homeCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/home.html',
+                controller: 'homeCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.search', {
+    .state('myApp.search', {
         url: '/search',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/search.html',
-            controller: 'searchCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/search.html',
+                controller: 'searchCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.login', {
+    .state('myApp.login', {
         url: '/login',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/login.html',
-            controller: 'loginCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/login.html',
+                controller: 'loginCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.profile', {
+    .state('myApp.profile', {
         url: '/profile',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/profile.html',
-            controller: 'profileCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/profile.html',
+                controller: 'profileCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.offers', {
+    .state('myApp.offers', {
         url: '/offers',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/offers.html',
-            controller: 'offersCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/offers.html',
+                controller: 'offersCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.coupons', {
+    .state('myApp.coupons', {
         url: '/coupons',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/coupons.html',
-            controller: 'couponsCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/coupons.html',
+                controller: 'couponsCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.userCart', {
+    .state('myApp.userCart', {
         url: '/userCart',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/userCart.html',
-            controller: 'userCartCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/userCart.html',
+                controller: 'userCartCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.aboutus', {
+    .state('myApp.aboutus', {
         url: '/aboutus',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/aboutus.html',
-            controller: 'aboutusCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/aboutus.html',
+                controller: 'aboutusCtrl'
+            }
         }
-      })
+    })
 
-      .state('myApp.contactus', {
+    .state('myApp.contactus', {
         url: '/contactus',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/contactus.html',
-            controller: 'contactusCtrl'
-          }
-        }
-      })
-
-      .state('myApp.categoryProducts', {
-            url: "/categoryProducts/:categoryID/:categoryName",
-            views: {
-                'menuContent' :{
-                    templateUrl: "templates/categoryProducts.html",
-                    controller: 'categoryProductsCtrl'
-                }
+            'menuContent': {
+                templateUrl: 'templates/contactus.html',
+                controller: 'contactusCtrl'
             }
-        })
+        }
+    })
 
-        .state('myApp.productView', {
-              url: "/productView/:product",
-              views: {
-                  'menuContent' :{
-                      templateUrl: "templates/productView.html",
-                      controller: 'productViewCtrl'
-                  }
-              }
-          });
+    .state('myApp.categoryProducts', {
+        url: "/categoryProducts/:categoryID/:categoryName",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/categoryProducts.html",
+                controller: 'categoryProductsCtrl'
+            }
+        }
+    })
 
-      $urlRouterProvider.otherwise('/myApp/home');
+    .state('myApp.productView', {
+        url: "/productView/:product",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/productView.html",
+                controller: 'productViewCtrl'
+            }
+        }
+    });
+
+    $urlRouterProvider.otherwise('/myApp/home');
 });
