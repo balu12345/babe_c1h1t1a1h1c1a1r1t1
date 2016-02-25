@@ -1,0 +1,37 @@
+<ion-view view-title="{{product.title}}" ng-controller="productViewCtrl" ng-init="loadProductDetails()">
+  <ion-content>
+
+    <ion-slide-box auto-play="true" does-continue="true" show-pager="true" style="height: 100%; margin:10px; background-color: transparent;">
+      <ion-slide ng-repeat="image in product.images track by $index">
+        <img ng-src="{{image.src}}" height="100%" width="100%">
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="row" style="font-weight: bold;">
+      {{product.title}}
+    </div>
+
+    <div class="list" style="float: left; width:100%; text-align: left;">
+      <label class="item item-input item-text-wrap item-stacked-label" style="margin:5px;">
+        <div class="row">
+          <div style="font-weight: bold;">Cost: &nbsp;&nbsp;&nbsp;</div>
+          Rs. {{product.price}}/-
+        </div>
+      </label>
+      <label class="item item-input item-text-wrap item-stacked-label" style="margin:5px;">
+        <div style="font-weight: bold;">Rating: &nbsp;&nbsp;
+          <rating ng-model="product.rating_count" class="col col-60" style="display: inline;" max="5" readonly="true"></rating>
+        </div>
+      </label>
+      <label class="item item-input item-text-wrap item-stacked-label" style="margin:5px;">
+        <div style="font-weight: bold;">Description:<br></div>
+        <div data-ng-bind-html="product.description" style="margin-top: 5px"></div>
+      </label>
+    </div>
+    <br>
+  </ion-content>
+
+  <ion-footer-bar style="background-color:transparent;">
+    <button class="button icon-center ion-android-cart button-balanced" style="width:100%;" ng-click="addToCart()">&nbsp; Add to Cart</button>
+  </ion-footer-bar>
+</ion-view>

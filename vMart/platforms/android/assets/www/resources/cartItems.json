@@ -1,0 +1,8 @@
+{
+    "items": [
+    {"url":"img/foodItem1.jpg","info":"foodItem1", "quantity" : 2, "cost" : 200},
+    {"url":"img/foodItem2.jpg","info":"foodItem2", "quantity" : 4, "cost" : 444},
+    {"url":"img/foodItem3.jpg","info":"foodItem3", "quantity" : 3, "cost" : 400},
+    {"url":"img/foodItem4.jpg","info":"foodItem4", "quantity" : 1, "cost" : 300}
+    ]
+}

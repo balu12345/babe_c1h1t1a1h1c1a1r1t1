@@ -1,0 +1,80 @@
+{
+   "customers" : [
+      {
+         "id" : 6,
+         "created_at" : "2016-01-18T09:56:19Z",
+         "email" : "krishnachandragoudo@gmail.com",
+         "first_name" : "Ramesh",
+         "last_name" : "Behara",
+         "username" : "krishnachandragoudo",
+         "role" : "customer",
+         "last_order_id" : "6827",
+         "last_order_date" : "2016-01-18T10:23:20Z",
+         "orders_count" : 1,
+         "total_spent" : "1.00",
+         "avatar_url" : "http://2.gravatar.com/avatar/?s=96",
+         "billing_address" : {
+            "first_name" : "Ramesh",
+            "last_name" : "Behara",
+            "company" : "Hashtag",
+            "address_1" : "Rushikonda, vishakhapatnam",
+            "address_2" : "",
+            "city" : "vishakapatanam",
+            "state" : "AP",
+            "postcode" : "530017",
+            "country" : "IN",
+            "email" : "krishnachandragoudo@gmail.com",
+            "phone" : "9949391096"
+         },
+         "shipping_address" : {
+            "first_name" : "Ramesh",
+            "last_name" : "Behara",
+            "company" : "Hashtag",
+            "address_1" : "Rushikonda, vishakhapatnam",
+            "address_2" : "",
+            "city" : "vishakapatanam",
+            "state" : "AP",
+            "postcode" : "530017",
+            "country" : "IN"
+         }
+      },
+      {
+         "id" : 7,
+         "created_at" : "2016-02-22T12:23:47Z",
+         "email" : "balu.in.u@gmail.com",
+         "first_name" : "",
+         "last_name" : "",
+         "username" : "balu.in.u",
+         "role" : "customer",
+         "last_order_id" : null,
+         "last_order_date" : null,
+         "orders_count" : 0,
+         "total_spent" : "0.00",
+         "avatar_url" : "http://1.gravatar.com/avatar/?s=96",
+         "billing_address" : {
+            "first_name" : "",
+            "last_name" : "",
+            "company" : "",
+            "address_1" : "",
+            "address_2" : "",
+            "city" : "",
+            "state" : "",
+            "postcode" : "",
+            "country" : "",
+            "email" : "",
+            "phone" : ""
+         },
+         "shipping_address" : {
+            "first_name" : "",
+            "last_name" : "",
+            "company" : "",
+            "address_1" : "",
+            "address_2" : "",
+            "city" : "",
+            "state" : "",
+            "postcode" : "",
+            "country" : ""
+         }
+      }
+   ]
+}

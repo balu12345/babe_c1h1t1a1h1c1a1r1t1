@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ionicframework.vmart102452" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>vMart</name>
+    <description>
+        An Ionic Framework and Cordova project.
+    </description>
+    <author email="you@example.com" href="http://example.com.com/">
+      Your Name Here
+    </author>
+    <content src="index.html" />
+    <meta content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" http-equiv="Content-Security-Policy" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <plugin name="cordova-plugin-device" spec="~1.1.1" />
+    <plugin name="cordova-plugin-console" spec="~1.0.2" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~3.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.1.0" />
+    <plugin name="ionic-plugin-keyboard" spec="~1.0.8" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.2.0" />
+    <gap:plugin name="cordova-plugin-googleplus" source="npm">
+        <param name="REVERSED_CLIENT_ID" value="148707366123-ot60d67borj9o6l6g58scfroeh2esbb5.apps.googleusercontent.com" />
+    </gap:plugin>
+    <engine name="android" spec="~5.1.0" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <plugin name="cordova-plugin-googleplus" spec="~4.0.8" />
+</widget>

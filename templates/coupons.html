@@ -1,0 +1,19 @@
+<ion-view style="background: #EAEAEA;" view-title="Coupons" ng-controller="couponsCtrl">
+    <ion-content>
+
+        <ion-refresher pulling-text="Load New Coupons..." on-refresh="loadNewCoupons()"></ion-refresher>
+
+        <div class="coupon" ng-repeat="coupon in couponsList track by $index" id="{{coupon.cid}}" ng-if="coupon.isActive">
+            <p class="coupon-duration">Valid from {{coupon.validFrom | date:'mediumDate'}} to {{coupon.validTo | date:'mediumDate'}}</p>
+            <hr>
+            <p class="coupon-code">
+                {{coupon.ccode | uppercase}}
+            </p>
+            <div class="coupon-desc">
+                <p>{{coupon.description}}</p>
+            </div>
+        </div>
+
+        <ion-infinite-scroll on-infinite="loadMoreCoupons()" distance="4%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

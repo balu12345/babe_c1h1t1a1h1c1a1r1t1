@@ -1,0 +1,24 @@
+<ion-view view-title="{{categoryName}}" ng-controller="categoryItemsCtrl">
+
+  <ion-content>
+
+    <ion-refresher pulling-text="Load New Products..." on-refresh="loadNewerProducts()"></ion-refresher>
+
+    <div class="card" ng-repeat="product in categoryProducts">
+      <div class="item item-text-wrap item-thumbnail-left" ng-click="gotoProductView(product)" style="float: left; text-align: left;">
+        <img ng-src="{{product.thumbnail}}">
+        <h2>{{product.title}}</h2>
+        <p>
+          Desc : {{product.title}}
+          <br> Cost: &nbsp;&nbsp;Rs. {{product.created}}/-
+          <br> Rating:
+          <rating ng-model="product.ups" max="5" readonly="true"></rating>
+        </p>
+      </div>
+    </div>
+
+    <ion-infinite-scroll on-infinite="loadOlderProducts()" distance="4%"></ion-infinite-scroll>
+
+  </ion-content>
+
+</ion-view>

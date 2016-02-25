@@ -1,0 +1,53 @@
+{
+    "email": "user@gamifad.com",
+    "coupons": [
+        {
+            "cid": "2",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": true,
+            "description":"Get two courses for \u00a39.95 or three courses for \u00a311.95"
+        },
+        {
+            "cid": "3",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": true,
+            "description":"Get an a la carte dish of the day for only \u00a310.01"
+        },
+        {
+            "cid": "4",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": true,
+            "description":"Buy one bottle of Ros\u00e9 and get one free - Sun to Thurs"
+        },
+        {
+            "cid": "5",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": false,
+            "description":"Get two courses for \u00a39.95 or three courses for \u00a311.95"
+        },
+        {
+            "cid": "6",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": false,
+            "description":"Get an a la carte dish of the day for only \u00a310.01"
+        },
+        {
+            "cid": "7",
+            "ccode": "947b8ncve2iu",
+            "validFrom": "1448137536",
+            "validTo": "1448310335",
+            "isActive": false,
+            "description":"Buy one bottle of Ros\u00e9 and get one free - Sun to Thurs"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<ion-view view-title="Search Items" ng-controller="searchCtrl">
+    <ion-content>
+
+        <div class="item item-input searchHeader">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" autofocus placeholder="Search">
+        </div>
+
+        <ion-list ng-repeat="item in searchList track by $index">
+          <ion-item>{{item.title}}</ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll on-infinite="loadMoreSearchResults()" distance="4%"></ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>
